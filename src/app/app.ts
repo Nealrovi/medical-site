@@ -1,13 +1,14 @@
 import {Component} from '@angular/core';
+import { Header } from "src/header/header";
+import { Descriptor } from "src/descriptor/descriptor";
+import { NavBar } from "src/nav-bar/nav-bar";
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  template: `
-    <h1>Default</h1>
-  `,
+  imports: [Header, Descriptor, NavBar],
+  templateUrl: "./app.html",
   styleUrls: ['./app.css'],
 })
 export class App {
-  title = 'default';
+  title = 'Medical Colombia';
 }

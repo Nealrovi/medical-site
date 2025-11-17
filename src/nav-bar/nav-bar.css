@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.barra-pestanas ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Limpia los floats */
+    background-color: #333; /* Color de fondo de la barra */
+}
+
+.barra-pestanas li {
+    float: left; /* Coloca los elementos de la lista horizontalmente */
+}
+
+.barra-pestanas li a {
+    display: block; /* Hace que todo el área del enlace sea clicable */
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: background-color 0.3s; /* Añade una transición suave al pasar el cursor */
+}
+
+/* Cambia el color de fondo cuando se pasa el cursor */
+.barra-pestanas li a:hover {
+    background-color: #111;
+}
+
+/* Estilo para la pestaña activa/seleccionada */
+.barra-pestanas li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
