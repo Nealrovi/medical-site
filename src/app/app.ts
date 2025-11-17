@@ -1,11 +1,13 @@
 import {Component} from '@angular/core';
-import { Header } from "src/app/shared/header/header";
-import { Descriptor } from "src/app/shared/descriptor/descriptor";
-import { NavBar } from "src/app/shared/nav-bar/nav-bar";
+import { Header } from './shared/header/header';
+import { Descriptor } from './shared/descriptor/descriptor';
+import { NavBar } from './shared/nav-bar/nav-bar';
+import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Descriptor, NavBar],
+  imports: [Header, Descriptor, NavBar, RouterOutlet],
   templateUrl: "./app.html",
   styleUrls: ['./app.css'],
 })
