@@ -1,0 +1,40 @@
+.search-container form {
+  display: flex; /* Alinea el input y el botón horizontalmente */
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+}
+
+#search-bar {
+  padding: 10px;
+  border: none;
+  flex-grow: 1; /* Permite que el input ocupe el espacio disponible */
+  font-size: 16px;
+  background: transparent; /* Fondo transparente para que use el del contenedor */
+}
+
+#search-bar:focus {
+  outline: none; /* Elimina el contorno predeterminado al hacer clic */
+}
+
+.search-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0; /* Bordes redondeados solo a la derecha */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Color al pasar el ratón por encima */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 600px) {
+  .search-container form {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+  }
+}
