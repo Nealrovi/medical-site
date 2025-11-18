@@ -3,12 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-busqueda',
   imports: [],
-  template: `
-    <p>
-      busqueda works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: "./busqueda.html",
+  styleUrls: ['./busqueda.css'],
 })
 export class Busqueda {
 

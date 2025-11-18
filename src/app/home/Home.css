@@ -1,0 +1,7 @@
+.lista-personalizada {
+  /* Elimina las viñetas predeterminadas si es necesario */
+  /* list-style-type: none; */ 
+  
+  /* Usa la imagen como viñeta */
+  list-style-image: url('ruta/a/tu/vinetta.png');
+}
