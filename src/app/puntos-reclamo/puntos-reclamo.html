@@ -1,0 +1,31 @@
+<div
+  class="selector-container"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutWrap
+  fxLayoutGap="1em"
+>
+  <mat-form-field>
+    <mat-label>Ciudad:</mat-label>
+    <mat-select>
+      @for (ciudad of ciudades; track ciudad) {
+      <mat-option [value]="ciudad.value">{{ciudad.viewValue}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="puntos">
+  <mat-list>
+    <mat-list-item *ngFor="let punto of puntos"> {{ punto }} </mat-list-item>
+  </mat-list>
+</div>
+
+<div class="requisitos">
+  <h2>¿Qué necesito llevar?</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let requisito of requisitos">
+      {{ requisito }}
+    </mat-list-item>
+  </mat-list>
+  <img href="https://cdn-icons-png.freepik.com/512/4789/4789117.png" />
+</div>
