@@ -1,10 +1,33 @@
-<form action="/procesar_formulario" method="POST">
-  <!-- Campos del formulario -->
-  <label for="tipo">Tipo de documento:</label>
-  <input type="text" id="tipo" name="tipo" />
+<form>
+  <mat-form-field>
+    <mat-label>Documento:</mat-label>
+    <mat-select panelClass="booking-facility-select">
+      @for (documento of tiposDocumento; track documento) {
+      <mat-option [value]="documento.value">{{documento.viewValue}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Número de documento</mat-label>
+    <input
+      matInput
+      type="number"
+      placeholder="Ingrese número de documento"
+      #filterInput
+      (input)="updateSearchId($event)"
+    />
+  </mat-form-field>
 
-  <label for="cedula">Número de cédula:</label>
-  <input type="number" id="cedula" name="cedula" />
-
-  <button type="submit">Enviar</button>
+  <button type="button" (click)="searchData()">Buscar</button>
 </form>
+
+<div *ngIf="filteredData.length > 0">
+  <ul>
+    <li *ngFor="let item of filteredData">
+      Identificación: {{ item.id }}, Nombre: {{ item.value }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="filteredData.length === 0">
+  <p>No se encontraron resultados.</p>
+</div>
